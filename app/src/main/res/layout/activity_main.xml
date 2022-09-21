@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:padding="20dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReadTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read Tag"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnWriteTag"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:onClick="onReadTag"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnWriteTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Write Tag"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReadTag"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:onClick="onWriteTag"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEraseTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Erase Tag"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnWriteTag"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:onClick="onEraseTag"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place Tag to erase"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btnEraseTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReadQR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan QR"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_indicator"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:onClick="onScanQRCode"
+        android:layout_marginTop="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCopyTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy Tag"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReadQR"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:onClick="onCopyTag"
+        android:layout_marginTop="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tag History"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCopyTag"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:onClick="onTagHistory"
+        android:layout_marginTop="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
